@@ -8,70 +8,52 @@ positions
     right:value;
     left:value;
  }
+   combinators
+   ------------
+   1.simple
+   2.combinators
+         child-selector (>)
+         decadent selector ( )-space
+         adjacent sibling selector/next sibling  (+)
+         general sibling selector (~)
+
+         syx:
+
+       simple-selector combinator simple-selector{
+            property:value;
+       }
+
+
+
  */
-
-
- .parent{
-    width: 300px;
-    height: 300px;
-    border: 2px solid;
-    position: relative;
-    top: 100px;
+ /* *{
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+ } */
+ h2{
+   margin-top: 25px;
  }
- .child{
-    width: 100px;
-    height: 100px;
-    border: 2px solid red;
-    position: absolute;
-    right: 0;
- }
-
- .img-container{
-    width: 300px;
-    height: 200px;
-    /* border: 2px solid; */
-    position: relative;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 10px;
-    overflow: hidden;
- }
- img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
- }
- p{
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 7px;
-    border-radius: 10px;
-    position:absolute;
-    top: 0;
- }
-
- .grand-container{
-    width: 500px;
-    height: 500px;
-    border: 2px solid;
-    position: absolute;
-    top: 500px;
-    left: 50%;
- }
- .parent-container{
-    width: 300px;
-    height: 300px;
-    border: 2px solid green;
-    position: absolute;
-    top: 50%;
-    left: 50%;
- }
- .child-container{
-    width: 100px;
-    height: 100px;
-    border: 2px solid red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
- }
+h3{
+   background-color: red;
+   text-align: center;
+   padding: 5px;
+   position: sticky;
+   top: 20px;
+   z-index: +1;
+}
+body{
+   background-color: black;
+   color: white;
+}
+.nav-container{
+   background-color: aqua;
+   padding: 5px;
+   position: fixed;
+   width: 100%;
+   top: 0px;
+   z-index: +2;
+}
+.container~p{
+   background-color: red;
+}
