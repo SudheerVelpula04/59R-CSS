@@ -1,21 +1,77 @@
-.first-container,.second-container{
-    width: 900px;
-    /* height: 500px; */
+/*
+positions
+---------
+ selector{
+    position:static,relative,absolute,fixed,sticky;
+    top:value;
+    bottom:value;
+    right:value;
+    left:value;
+ }
+ */
+
+
+ .parent{
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+    position: relative;
+    top: 100px;
+ }
+ .child{
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    position: absolute;
+    right: 0;
+ }
+
+ .img-container{
+    width: 300px;
+    height: 200px;
     /* border: 2px solid; */
-    margin: 5PX;
-    
-}
-.item-1,.item-2,.item-3,.item-4{
-    width: 200px;
-    height: 490px;
-    /* border: 2px solid; */
+    position: relative;
     margin: 5px;
     display: inline-block;
-}
-img{
+    border-radius: 10px;
+    overflow: hidden;
+ }
+ img{
     width: 100%;
-}
-h3,p{
-    text-align: center;
-    padding: 5px;
-}
+    height: 100%;
+    object-fit: cover;
+ }
+ p{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 7px;
+    border-radius: 10px;
+    position:absolute;
+    top: 0;
+ }
+
+ .grand-container{
+    width: 500px;
+    height: 500px;
+    border: 2px solid;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+ }
+ .parent-container{
+    width: 300px;
+    height: 300px;
+    border: 2px solid green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+ }
+ .child-container{
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+ }
