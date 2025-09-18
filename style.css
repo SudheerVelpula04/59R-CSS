@@ -31,7 +31,7 @@ positions
    padding: 0;
    scroll-behavior: smooth;
  } */
- h2{
+ /* h2{
    margin-top: 25px;
  }
 h3{
@@ -56,4 +56,25 @@ body{
 }
 .container~p{
    background-color: red;
+} */
+
+.container{
+   background-color: aqua;
+   padding: 5px;
+   position: relative;
+   width: 100%;
 }
+.container>.first{
+   display: inline-block;
+}
+.container>.item{
+   display: inline-block;
+   position: absolute;
+   right: 0px;
+   margin-right: 10px ;
+}
+.item>.a{
+   margin-right: 10px;
+}
+
+
