@@ -1,83 +1,67 @@
 
 /*
-pseudo class
-pseudo elements
-----------------
-
-
+transactions
+------------ 
  */
- /* span{
-   background-color: yellow;
-   font-style: italic;
- }
- .para{
-   color: red;
- }
- .para::before{
-   content: "NOTE:";
-   font-style: italic;
-   background-color: yellow;
- }
- .para::after{
-   content: "🫠";
-   font-size: xx-large;
+ /* body{
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
  } */
+ .container{
+  width: 300px;
+  height: 300px;
+  border: 3px solid black;
+  background-color: purple;
+  /* transition-property: all;
+  transition-duration:5s;
+  transition-timing-function: ease;
+  transition-delay: 2s; */
+  transition: all 0.8s ease;
+ 
+ }
+ .container:hover{
+  background-color: red;
+  padding: 100px;
+  border-radius: 50%;
+ }
 
-/* li::before{
-   content: "😆";
-} */
- /* li{
-   font-size: xx-large;
+ .nav{
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  border: 2px solid red;
+   /* display: none; */
+   transition: all 2s ease;
+   /* position: relative; */
+   /* left: -100px; */
+   /* bottom: 250px; */
+   height: 0px;
+   overflow: hidden;
  }
- .list-1::before,.list-1::after{
-   content: "😃";
+ .item{
+  padding: 10px;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
  }
- .list-2::before,.list-2::after{
-   content: "🤣";
+ .item:hover{
+  color: red;
+  cursor: pointer;
+  /* text-transform: uppercase; */
  }
- .list-3::before{
-   content: "😉";
+ .bi{
+  font-size: xx-large;
  }
- .list-4::before{
-   content: "🫠";
+ #check{
+  display: none;
  }
- .list-5::before{
-   content: "😇";
- } */
-
-/* li::marker{
-   content: "👉";
-} */
- /* span{
-   font-size: xx-large;
-   color: yellow;
- } */
-/* p::first-letter{
-   font-size: xx-large;
-   color: gold;
-} */
- /* p::first-line{
-   color: lightgreen;
-   letter-spacing: 20px;
-   text-transform: uppercase;
-   text-transform: capitalize;
- } */
-
- /* .para::selection{
-   color: red;
-   background-color: black;
- } */
-  
- /* input::placeholder{
-   color: yellow;
-   letter-spacing: 10px;
-   font-style: italic;
-   background-color: black;
- } */
-
- /* div>p:nth-child(even){
-   background-color: red;
- } */
-  /* div>p:nth-last-child(5){
-   background-color: red;
-  } */
+ #check:checked+.nav{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* left: 0px; */
+  /* bottom: 0px; */
+  height: fit-content;
+ }
