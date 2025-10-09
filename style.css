@@ -1,67 +1,115 @@
-
 /*
-transactions
------------- 
- */
- /* body{
-  display:flex ;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
- } */
- .container{
-  width: 300px;
-  height: 300px;
-  border: 3px solid black;
-  background-color: purple;
-  /* transition-property: all;
-  transition-duration:5s;
-  transition-timing-function: ease;
-  transition-delay: 2s; */
-  transition: all 0.8s ease;
- 
- }
- .container:hover{
-  background-color: red;
-  padding: 100px;
-  border-radius: 50%;
- }
+units
+-----
+units are specify the how much size need to be a container
+ 1. absolute-units
+      px
+      in
+      cm
+      mm
 
- .nav{
-  border: 1px solid black;
-  background-color: black;
-  color: white;
-  width: fit-content;
-  border: 2px solid red;
-   /* display: none; */
-   transition: all 2s ease;
-   /* position: relative; */
-   /* left: -100px; */
-   /* bottom: 250px; */
-   height: 0px;
-   overflow: hidden;
+ 2. relative-units
+      %- the % will check the parent container size
+
+      font-size only 
+      em- the element font size it will consider the
+          parent element font size
+      rem- root element font size 
+          the root element font size default is 1rem = 16px
+      vh- it will consider the view-port height
+          it doest consider any parent container size
+      vw-it will consider the view-port width
+          it doest consider any parent container size
+
+
+ */
+ /* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ } */
+
+
+ .view{
+  /* 16px h and 16px w  */
+  /* width: 2rem;
+  height: 2rem; */
+  font-size: 10px;
+  /* background-color: aqua; */
  }
- .item{
-  padding: 10px;
-  transition-property: all;
-  transition-duration: 0.8s;
-  transition-timing-function: ease;
+.v-child{
+  width:2rem;
+  height:2em;
+  background-color: red;
+}
+
+
+ /* body,html{
+  height: 100%;
+ } */
+ /* 
+.parent{
+  width: 50%;
+  height: 50%;
+  background-color: red;
+  border: 10px solid;
+}
+.child{
+  width: 50%;
+  height: 50%;
+  background-color: blue;
+}
+ 
+.english{
+  width: 50%;
+  margin-top: 10px;
+  border: 2px solid;
+  border-radius: 15px;
+  height: 30px;
+  overflow: hidden;
+  background-color: aqua;
+}
+.english>.in-english{
+  width: 90%;
+  background-color: lightgray;
+  height: 100%;
+  text-align: center;
+}
+.Spanish{
+  width: 50%;
+  margin-top: 10px;
+  border: 2px solid;
+  border-radius: 15px;
+  height: 30px;
+  overflow: hidden;
+  background-color: aqua;
+}
+.Spanish>.in-Spanish{
+  width: 70%;
+  background-color: lightgray;
+  height: 100%;
+  text-align: center;
+}
+.German{
+  width: 50%;
+  margin-top: 10px;
+  border: 2px solid;
+  border-radius: 15px;
+  height: 30px;
+  overflow: hidden;
+  background-color: aqua;
+}
+.German>.in-German{
+  width: 55%;
+  background-color: lightgray;
+  height: 100%;
+  text-align: center;
+} */
+
+
+ html{
+  font-size: 30px;
  }
- .item:hover{
-  color: red;
-  cursor: pointer;
-  /* text-transform: uppercase; */
- }
- .bi{
-  font-size: xx-large;
- }
- #check{
-  display: none;
- }
- #check:checked+.nav{
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* left: 0px; */
-  /* bottom: 0px; */
-  height: fit-content;
+ .em{
+  width: ;
  }
