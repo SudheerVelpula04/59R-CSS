@@ -220,18 +220,21 @@ body,html{
     text-align: center;
 }
 @media screen and (max-width: 577px) {
+    :root{
+        font-size: 0.8rem;
+    }
     .bg-container>.text-container{
         font-size: 3rem;
         line-height:70px ;
     }
     .bg-container>.text-container-2{
         bottom: 30px;
-        left: 60px;
+        left: 80px;
         font-size: 0.4rem;
     }
     .bg-container>.text-container-3{
         bottom: 5px;
-        right: 80px;
+        right: 90px;
     }
     .bg-container{
         height: 60%;
