@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", sans-serif;
+     font-size: 1.2rem;
+}
+body,html{
+    height: 100%;
+}
+.nav-container{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: +1;
+}
+.nav-container>.nav-item{
+    width: 300px;
+    text-align: center;
+    padding: 8px;
+    transition: 0.7s ease;
+}
+.nav-item:hover{
+    color: black;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.bg-container{
+    height: 72%;
+    background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.bg-container>.text-container{
+    font-size: 6.4rem;
+    color: white;
+    line-height: 150px;
+}
+.text-container-2{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.text-container-3{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+.main-section{
+    display: flex;
+    justify-content: center;
+}
+.main{
+    width: 45%;
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+}
+.about-container>p{
+    padding: 8px;
+    background-color: black;
+    color: white;
+    letter-spacing: 5px;
+    margin: 50px 0px;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+.para-container>p{
+    line-height: 20px;
+    text-align: justify;
+    margin: 20px 0px;
+}
+.para-container-2>p{
+    line-height: 20px;
+    text-align: justify;
+    margin: 20px 0px;
+}
+.owner-container{
+    border-left-color: rgba(0, 0, 0, 0.381);
+    border-left-width: 5px;
+    border-left-style: solid;
+    padding: 20px;
+    background-color: whitesmoke;
+    margin: 0px 0px 30px 0px;
+}
+.owner-container>p{
+    margin: 20px 0px;
+}
+.image-container>img{
+    width: 100%;
+    filter: grayscale(50%);
+    margin: 20px 0px;
+}
+.open-time{
+    padding: 0px 20px ;
+    margin-bottom:10px ;
+}
+.address{
+    padding: 0px 20px ;
+    margin:20px 0px ;
+}
+.label-container{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.label-container>label{
+    width: 300px;
+    /* background-color: lightblue; */
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+}
+.label-container>label:hover{
+    background-color: rgb(189, 121, 121);
+    cursor: pointer;
+}
+.eat-container{
+ padding: 10px;   
+ display: none;
+}
+.eat-container>div{
+    line-height: 40px;
+    padding: 20px;
+}
+.drink-container{
+    padding: 10px;
+    display: none;
+}
+.drink-container>div{
+       line-height: 40px;
+    padding: 20px;
+}
+#eat{
+    display: none;
+}
+#eat:checked~.eat-container{
+    display: block;
+}
+#drink{
+    display: none;
+}
+#drink:checked~.drink-container{
+    display: block;
+}
+.menu-container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.image-container-2{
+    margin: 20px 0px;
+}
+.image-container-2>img{
+    width: 100%;
+    filter: grayscale(50%);
+
+}
+.find-container{
+   padding: 10px;
+}
+.image-container-3{
+    margin: 20px 0px;
+}
+.image-container-3>img{
+    width: 100%;
+    filter: grayscale(50%);
+}
+.fly-container{
+    text-align: justify;
+}
+.fly-container>p>span{
+    background-color: black;
+    color: white;
+    padding: 4px;
+    
+}
+.Reserve{
+    margin: 20px 0px;
+}
+.form-container>input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+}
+.form-container>div>input{
+    padding: 10px;
+    border: 0px solid ;
+    background-color: black;
+    color: white;
+    letter-spacing: 5px;
+    margin: 10px 0px;
+}
+.form-container>div>input:hover{
+    
+    color: black;
+    background-color: rgb(239, 224, 224);
+}
+.footer{
+    margin-top: 40px;
+    background-color: rgb(205, 254, 238);
+    padding: 60px;
+    text-align: center;
+}
