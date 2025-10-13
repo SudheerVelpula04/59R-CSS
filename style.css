@@ -1,115 +1,70 @@
-/*
-units
------
-units are specify the how much size need to be a container
- 1. absolute-units
-      px
-      in
-      cm
-      mm
+/* media Query's
+-----------------
+responsive web deign
+---------------------
+1. meta view port
+2. relative units
+3. box-sizing:border-box;
+4. flex
+5. grid
+6. media (mobile)
 
- 2. relative-units
-      %- the % will check the parent container size
+syx:
+----
+end of the css we need to write the media q 
+1. mobile view
+2. tab view
+3. desk-top view
+    orientation:landscape/portrait
+@media all/screen/print and  (break-point) and (break-point){
 
-      font-size only 
-      em- the element font size it will consider the
-          parent element font size
-      rem- root element font size 
-          the root element font size default is 1rem = 16px
-      vh- it will consider the view-port height
-          it doest consider any parent container size
-      vw-it will consider the view-port width
-          it doest consider any parent container size
-
-
+    selector{
+      property:value;
+      property:value;
+      property:value;
+    }
+}
  */
- /* *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- } */
-
-
- .view{
-  /* 16px h and 16px w  */
-  /* width: 2rem;
-  height: 2rem; */
-  font-size: 10px;
-  /* background-color: aqua; */
+ body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
  }
-.v-child{
-  width:2rem;
-  height:2em;
-  background-color: red;
+.div{
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
- /* body,html{
-  height: 100%;
- } */
- /* 
-.parent{
-  width: 50%;
-  height: 50%;
-  background-color: red;
-  border: 10px solid;
-}
-.child{
-  width: 50%;
-  height: 50%;
-  background-color: blue;
-}
- 
-.english{
-  width: 50%;
-  margin-top: 10px;
-  border: 2px solid;
-  border-radius: 15px;
-  height: 30px;
-  overflow: hidden;
-  background-color: aqua;
-}
-.english>.in-english{
-  width: 90%;
-  background-color: lightgray;
-  height: 100%;
+.div>p{
+  font-size: 1.5rem;
   text-align: center;
+  color: purple;
 }
-.Spanish{
-  width: 50%;
-  margin-top: 10px;
-  border: 2px solid;
-  border-radius: 15px;
-  height: 30px;
-  overflow: hidden;
-  background-color: aqua;
-}
-.Spanish>.in-Spanish{
-  width: 70%;
-  background-color: lightgray;
-  height: 100%;
-  text-align: center;
-}
-.German{
-  width: 50%;
-  margin-top: 10px;
-  border: 2px solid;
-  border-radius: 15px;
-  height: 30px;
-  overflow: hidden;
-  background-color: aqua;
-}
-.German>.in-German{
-  width: 55%;
-  background-color: lightgray;
-  height: 100%;
-  text-align: center;
-} */
 
-
- html{
-  font-size: 30px;
- }
- .em{
-  width: ;
- }
+@media screen and (max-width: 577px) {
+  .div{
+    background-color: pink;
+    width: 150px;
+    height: 150px;
+  }
+  .div>p{
+    font-size: 1rem;
+    color: red;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 990px){
+    .div{
+      background-color: red;
+    }
+}
+@media screen and (min-width: 992px) {
+  .div{
+    background-color: lightblue;
+    width: 300px;
+    height: 300px;
+  }
+}
