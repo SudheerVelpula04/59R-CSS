@@ -25,46 +25,55 @@ end of the css we need to write the media q
     }
 }
  */
- body{
+.container{
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
- }
-.div{
-  width: 200px;
-  height: 200px;
-  background-color: yellow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid;
+  justify-content: space-between;
 }
-.div>p{
-  font-size: 1.5rem;
-  text-align: center;
-  color: purple;
+.inner-container{
+  display: flex;
+}
+.item{
+  padding: 5px;
+}
+.item-1{
+  background-color: green;
+}
+.item-3{
+  background-color: orange;
+}
+.item-4{
+  background-color: pink;
+}
+.item-5{
+  background-color: red;
+}
+.item-6{
+  background-color: purple;
+  display: none;
+}
+.item-7{
+  background-color: lightblue;
+  display: none;
 }
 
 @media screen and (max-width: 577px) {
-  .div{
-    background-color: pink;
-    width: 150px;
-    height: 150px;
-  }
-  .div>p{
-    font-size: 1rem;
-    color: red;
-  }
+ .item-1,.item-3,.item-4,.item-5,.item-6{
+  display: none;
+ }
+ .container{
+  justify-content: center;
+ }
+ .item-7{
+  display: flex;
+ }
 }
-@media screen and (min-width: 577px) and (max-width: 990px){
-    .div{
-      background-color: red;
-    }
-}
-@media screen and (min-width: 992px) {
-  .div{
-    background-color: lightblue;
-    width: 300px;
-    height: 300px;
+@media screen and (min-width: 577px) and (max-width: 900px) {
+  .item-4,.item-5{
+    display: none;
+  }
+  .item-6{
+    display: flex;
   }
 }
