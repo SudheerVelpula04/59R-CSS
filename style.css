@@ -1,79 +1,92 @@
-/* media Query's
------------------
-responsive web deign
----------------------
-1. meta view port
-2. relative units
-3. box-sizing:border-box;
-4. flex
-5. grid
-6. media (mobile)
+/*
+ todays topic is grid in css
+ -----------------------------
+ gird
+ ----
 
-syx:
-----
-end of the css we need to write the media q 
-1. mobile view
-2. tab view
-3. desk-top view
-    orientation:landscape/portrait
-@media all/screen/print and  (break-point) and (break-point){
-
-    selector{
-      property:value;
-      property:value;
-      property:value;
-    }
-}
  */
-.container{
-  width: 100%;
-  display: flex;
-  border: 2px solid;
-  justify-content: space-between;
-}
-.inner-container{
-  display: flex;
-}
-.item{
+
+ .container{
   padding: 5px;
+  font-size: 2rem;
+  border: 2px solid;
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3,1fr);
+  /* grid-row-gap: 5px;
+  grid-column-gap: 5px; */
+  /* grid-gap: 10px; */
+  gap:10px;
+  /* grid-template-columns:1fr 1fr 1fr 1fr 1fr; */
+  /* grid-template-rows: 100px 100px; */
+ }
+ /* .item-1 {
+   background-color: lightblue;
+   grid-column-start: 1;
+   grid-column-end: 3;
+
+ }
+.item-2 {
+   background-color: lightgray;
+   grid-column-start: 3;
+   grid-column-end: 4;
 }
-.item-1{
-  background-color: green;
+
+.item-3 {
+   background-color: lightgreen;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 2;
+   grid-row-end: 4;
 }
-.item-3{
-  background-color: orange;
+
+.item-4 {
+   background-color: lightsalmon;
+   grid-column-start: 2;
+   grid-column-end: 4;
 }
-.item-4{
-  background-color: pink;
+
+.item-5 {
+   background-color: lightseagreen;
+   grid-column-start: 2;
+   grid-column-end: 4;
+} */
+
+ .item-1 {
+   background-color: lightblue;
+   grid-column-start: 1;
+   grid-column-end: 4;
+ }
+.item-2 {
+   background-color: lightgray;
+   /* grid-column-start: 1;
+   grid-column-end: 2; */
+   grid-column: 1/2;
+
+   /* grid-row-start: 2;
+   grid-row-end: 4; */
+
+   grid-row: 2/4
 }
-.item-5{
-  background-color: red;
+
+.item-3 {
+   background-color: lightgreen;
+   /* grid-column-start: 2;
+   grid-column-end: 4; */
+   grid-column: 2/4;
+}
+
+.item-4 {
+   background-color: lightsalmon;
+}
+
+.item-5 {
+   background-color: lightseagreen;
 }
 .item-6{
-  background-color: purple;
-  display: none;
-}
-.item-7{
-  background-color: lightblue;
-  display: none;
-}
-
-@media screen and (max-width: 577px) {
- .item-1,.item-3,.item-4,.item-5,.item-6{
-  display: none;
- }
- .container{
-  justify-content: center;
- }
- .item-7{
-  display: flex;
- }
-}
-@media screen and (min-width: 577px) and (max-width: 900px) {
-  .item-4,.item-5{
-    display: none;
-  }
-  .item-6{
-    display: flex;
-  }
+  background-color: lightslategray;
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  grid-column: 1/4;
 }
