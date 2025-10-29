@@ -1,133 +1,140 @@
-/*
- todays topic is grid in css
- -----------------------------
- gird
- ----
-
- */
-
- /*.container{
-  padding: 5px;
-  font-size: 2rem;
-  border: 2px solid;
-  text-align: center;
-  display: grid;
-   height: 100vh; */
-  
-  /* grid-row-gap: 5px;
-  grid-column-gap: 5px; */
-  /* grid-gap: 10px; */
+/* 
  
-  /* grid-template-columns:1fr 1fr 1fr 1fr 1fr; */
-  /* grid-template-rows: 100px 100px; 
- }
-  */
-
- /* .item-1 {
-   background-color: lightblue;
-   grid-column-start: 1;
-   grid-column-end: 3;
-
- }
-.item-2 {
-   background-color: lightgray;
-   grid-column-start: 3;
-   grid-column-end: 4;
+*/
+body{
+   display: flex;
+   align-items: center;
+   height: 100vh;
+   justify-content: space-around;
+}
+.first{
+   width: 300px;
+   height: 300px;
+   background-color: purple;
+   transition: 2s ease;
+   border: 5px solid black;
+   border-radius: 10px;
+   overflow: hidden;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* animation-name:fall ; */
+   animation-duration:5s ;
+}
+.second{
+   width: 300px;
+   height: 300px;
+   background-color: red;
+}
+.first>img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: 0.8s ease;
+}
+.first:hover>img{
+   /* transform: scale(1.2); */
+   transform: translateY(300px);
+   border-radius: 50%;
+}
+.first>p{
+   margin: 0;
+   position: absolute;
+   transform: translateX(-300px);
+   transition: 0.8s ease;
+   /* top: 0; */
+}
+.first:hover>p{
+   transform: translateX(0px) scale(1.8) rotate(360deg);
+   text-transform: uppercase;
+}
+.first:hover{
+   border-radius: 50%;
+}
+.second{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+.second>img{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transform: translateX(300px);
+   transition: 0.8s ease;
+}
+.second:hover>img{
+   transform: translateX(0px);
+}
+.second>div{
+   transition: 0.8s ease;
+   font-size: 2rem;
+}
+.second:hover>div{
+   transform: translateX(-300px);
+   font-size: 1rem;
+}
+body{
+   animation-name: opacity;
+   animation-duration: 2s;
+   /* animation-iteration-count:infinite ; */
+   opacity: 1;
 }
 
-.item-3 {
-   background-color: lightgreen;
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 2;
-   grid-row-end: 4;
-}
-
-.item-4 {
-   background-color: lightsalmon;
-   grid-column-start: 2;
-   grid-column-end: 4;
-}
-
-.item-5 {
-   background-color: lightseagreen;
-   grid-column-start: 2;
-   grid-column-end: 4;
-} */
-
-   .container{
-      display: grid;
-      border: 2px solid;
-      text-align: center;
-      height: 100vh;
-      /* height: 500px; */
-      /* gap: 10px; */
-      grid-template-columns: repeat(4,1fr);
-      /* justify-content: end;
-      align-items: self-end;
-      align-content: center; */
-      grid-template-areas: 
-      "e c c b"
-      "e d a h"
-      "e g f h";
+@keyframes color {
+   from{
+      background-color: yellow
    }
-
-   .item>img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+   to{
+      background-color: green;
    }
-
- .item-1 {
-   background-color: lightblue;
-   grid-area: a;
- }
-.item-2 {
-   background-color: lightgray;
-  grid-area: b;
 }
-
-.item-3 {
-   background-color: lightgreen;
-   grid-area: c;
-
+@keyframes fall {
+   from{
+      transform: translateY(-400px) rotate(360deg);
+      border-radius: 50%;
+   }
+   to{
+      transform: translateY(0px);
+   }
 }
-
-.item-4 {
-   background-color: lightsalmon;
-   grid-area: d;
+@keyframes random {
+   0%{
+      background-color: lightblue;
+   }
+   10%{
+      background-color: blueviolet;
+   }
+   25%{
+      background-color: red;
+   }
+   40%{
+      background-color: purple;
+   }
+   60%{
+      background-color: lightsalmon;
+   }
+   70%{
+      background-color: lightpink;
+   }
+   80%{
+      background-color: lightseagreen;
+   }
+   90%{
+      background-color: green;
+   }
+   100%{
+      background-color:orange;
+   }
 }
-
-.item-5 {
-   background-color: lightseagreen;
-   grid-area: e;
-}
-.item-6{
-  background-color: lightslategray;
-  grid-area: f;
+@keyframes opacity {
+  from{
+   transform: translate(-500px);
+  }
  
 }
-.item-7{
-   background-color: lightcoral;
-   grid-area: g;
-}
-.item-8{
-   background-color: lightgoldenrodyellow;
-   grid-area: h;
-}
 
-/* @media screen and (max-width: 557px) {
-   .container{
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-      "a"
-      "b"
-      "c"
-      "d"
-      "e"
-      "f"
-      "g"
-      "h";
-   }
-   
-} */
